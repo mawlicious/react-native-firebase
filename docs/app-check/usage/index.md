@@ -88,9 +88,11 @@ The [official documentation](https://firebase.google.com/docs/app-check/web/cust
 
 ### on iOS
 
-App Check may be used in CI environments by following the upstream documentation to configure a debug token shared with your app in the CI environment.
+App Check may be used in CI environments by following the [upstream documentation](https://firebase.google.com/docs/app-check/ios/debug-provider) to configure a debug token shared with your app in the CI environment.
 
 In certain react-native testing scenarios it may be difficult to access the shared secret, but the react-native-firebase testing app for e2e testing does successfully fetch App Check tokens via setting an environment variable and initializing the debug provider before firebase configure in AppDelegate.m for iOS.
+
+> If you're using Expo, make sure to add the `@react-native-firebase/app-check` config plugin to your `app.json` or `app.config.js`. It handles the iOS installation steps for you. For instructions on how to do that, view the [Expo](/#expo) installation section. (This is only required if you want to use he App Check Debug Provider with an iOS Simulator.)
 
 ### on Android
 
